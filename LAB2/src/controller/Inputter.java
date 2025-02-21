@@ -1,11 +1,4 @@
 package controller;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 import model.Customer;
@@ -19,16 +12,16 @@ public class Inputter {
             System.out.print(msg);
             String input = sc.nextLine().trim();
 
-            // Kiểm tra nếu chuỗi rỗng
+   
             if (input.isEmpty()) {
                 System.err.println("Input can't be empty. Please re-input:");
-                continue;  // Yêu cầu nhập lại
+                continue;  
             }
 
-            // Kiểm tra tính hợp lệ của chuỗi nhập
+            
             boolean check = Acceptable.isValid(input, regex);
             if (check) {
-                return input;  // Nếu hợp lệ, trả về chuỗi
+                return input;  
             } else {
                 System.err.println("Input not valid. Please re-input:");
             }
@@ -57,9 +50,7 @@ public class Inputter {
 
    
 
-    
-
-    //Check ID customer tồn tại hay chưa
+       
     public static boolean checkCustomerId(String customerId, List<Customer> c) {
         for (Customer customer : c) {
             if (customerId.equalsIgnoreCase(customer.getCustomerId())) {
@@ -73,14 +64,6 @@ public class Inputter {
    
 
 
-    /**
-     *
-     * @param string
-     * @param min
-     * @param max
-     * @param allowBlank
-     * @return
-     */
   public static int getInt(String msg, int optionMin, int optionMax) {
         String input;
         int result;
