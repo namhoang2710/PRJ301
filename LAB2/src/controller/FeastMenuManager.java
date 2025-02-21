@@ -94,9 +94,9 @@ public class FeastMenuManager {
     }
 
     public void displayFeastItem() {
-        //Sắp xếp danh sách theo giá tăng dần 
+       
         Collections.sort(listI);
-        // Hiển thị danh sách thực đơn
+       
         System.out.println("List of Set Menus for ordering party:");
         for (FeastItem feastItem : listI) {
             System.out.println(feastItem);

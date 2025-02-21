@@ -61,7 +61,14 @@ public class Inputter {
     }
 
     
-   
+     public static Customer getCustomerById(String customerId, List<Customer> c) {
+        for (Customer customer : c) {
+            if (customerId.equals(customer.getCustomerId())) {
+                return customer;
+            }
+        }
+        return null;
+    }
 
 
   public static int getInt(String msg, int optionMin, int optionMax) {
