@@ -51,10 +51,8 @@ public class CustomerManager {
         
         
             String keyWord = Inputter.getStringEmpty("Enter the full or partial name to search:", Acceptable.CUSTOMER_NAME);
-            //Tìm kiếm khách hàng với keywword
             List<Customer> listS = searchCustomerByKeyWord(keyWord);
-            if (listS.isEmpty()) {
-                //Nếu không tìm thấy đối tượng nào 
+            if (listS.isEmpty()) {               
                 System.out.println("No one matches the search criterial!");
             } else {
                 System.out.println("\n------------------------------------------------------------------");
