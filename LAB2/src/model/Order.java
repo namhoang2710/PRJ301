@@ -92,7 +92,7 @@ public class Order implements Serializable{
     
     @Override
     public String toString() {
-        //Sử dụng stringbuilder để dựng form
+        
         StringBuilder sb = new StringBuilder();
         sb.append("----------------------------------------------------------------\n");
         sb.append("Customer order information [Order ID: ").append(orderId).append("]\n");
