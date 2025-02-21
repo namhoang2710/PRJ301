@@ -1,7 +1,7 @@
 package program;
 
 import controller.CustomerManager;
-
+import controller.FeastMenuManager;
 import controller.Inputter;
 import controller.OrderManager;
 
@@ -9,8 +9,10 @@ public class Menu {
 
     public void display() {
         int choice;
+         
         CustomerManager customerManager = new CustomerManager();
-        
+        FeastMenuManager feastMenuManager = new FeastMenuManager();
+        OrderManager orderManager = new OrderManager();
         
 
         do {
@@ -32,7 +34,15 @@ public class Menu {
                 case 1:
                     customerManager.registerCustomers();
                     break;
-                
+                case 2:
+                    customerManager.updateCustomerById();
+                    break;
+                case 3:
+                    customerManager.searchCustomerByName();
+                    break;
+                case 4:
+                    feastMenuManager.displayFeastItem();
+                    break;
                 case  9:
                     break;
             }
